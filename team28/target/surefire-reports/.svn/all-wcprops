@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/project28/!svn/ver/136/trunk/rgr/target/surefire-reports
+END
+rgr.InfoTest.txt
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/project28/!svn/ver/136/trunk/rgr/target/surefire-reports/rgr.InfoTest.txt
+END
+rgr.FileWriterTest.txt
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/project28/!svn/ver/136/trunk/rgr/target/surefire-reports/rgr.FileWriterTest.txt
+END
+TEST-rgr.InfoTest.xml
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/project28/!svn/ver/136/trunk/rgr/target/surefire-reports/TEST-rgr.InfoTest.xml
+END
+TEST-rgr.FileWriterTest.xml
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/project28/!svn/ver/136/trunk/rgr/target/surefire-reports/TEST-rgr.FileWriterTest.xml
+END
+rgr.MethodTest.txt
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/project28/!svn/ver/136/trunk/rgr/target/surefire-reports/rgr.MethodTest.txt
+END
+TEST-rgr.ClassTest.xml
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/project28/!svn/ver/136/trunk/rgr/target/surefire-reports/TEST-rgr.ClassTest.xml
+END
+TEST-rgr.MethodTest.xml
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/project28/!svn/ver/136/trunk/rgr/target/surefire-reports/TEST-rgr.MethodTest.xml
+END
+rgr.ClassTest.txt
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/project28/!svn/ver/136/trunk/rgr/target/surefire-reports/rgr.ClassTest.txt
+END

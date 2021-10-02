@@ -1,0 +1,83 @@
+10
+
+dir
+159
+http://xn--e1afhkfagivn.xn--p1ai/svn/project28/trunk/rgr/target
+http://xn--e1afhkfagivn.xn--p1ai/svn/project28
+
+
+
+2020-12-27T16:52:52.104018Z
+136
+user128
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+507a18e2-b3c0-400c-b16b-82e03e95350d
+
+classes
+dir
+
+generated-sources
+dir
+
+generated-test-sources
+dir
+
+maven-archiver
+dir
+
+maven-status
+dir
+
+rgr-0.0.1-SNAPSHOT.jar
+file
+
+
+
+
+2021-05-07T21:25:27.889000Z
+f5fa6a4b9f202adcded78a75ef25b0d5
+2020-12-27T16:52:52.104018Z
+136
+user128
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+25317
+
+surefire-reports
+dir
+
+test-classes
+dir
+
