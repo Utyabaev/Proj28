@@ -1,3 +1,4 @@
+package team28;
 public class User extends UDB  {
 
     /*public User(String login, String pass, String role) {
