@@ -78,7 +78,7 @@ public class Calc extends JFrame {
         final Error_msg error_msg_perforation = new Error_msg();
         final  Error_msg error_msg_type = new Error_msg();
 
-        final JFrame frame = new JFrame("Калькулятор стоимости производства рекламных материалов. Полиграфия.");
+        final JFrame frame = new JFrame("ГЉГ Г«ГјГЄГіГ«ГїГІГ®Г° Г±ГІГ®ГЁГ¬Г®Г±ГІГЁ ГЇГ°Г®ГЁГ§ГўГ®Г¤Г±ГІГўГ  Г°ГҐГЄГ«Г Г¬Г­Г»Гµ Г¬Г ГІГҐГ°ГЁГ Г«Г®Гў. ГЏГ®Г«ГЁГЈГ°Г ГґГЁГї.");
         frame.setLayout(null);
         frame.setSize(490, 650);
         frame.setResizable(false);
@@ -93,75 +93,75 @@ public class Calc extends JFrame {
         bar.setVisible(true);
         bar.setSize(490,15);
 
-        JMenu createFile = new JMenu("Файл");
+        JMenu createFile = new JMenu("Г”Г Г©Г«");
         bar.add(createFile);
-        final JMenuItem pdf = new JMenuItem("Выгрузить в PDF");
+        final JMenuItem pdf = new JMenuItem("Г‚Г»ГЈГ°ГіГ§ГЁГІГј Гў PDF");
         createFile.add(pdf);
 
-        JMenu user = new JMenu("Аккаунт");
+        JMenu user = new JMenu("ГЂГЄГЄГ ГіГ­ГІ");
         bar.add(user);
-        JMenuItem logout = new JMenuItem("Выйти из аккаунта");
+        JMenuItem logout = new JMenuItem("Г‚Г»Г©ГІГЁ ГЁГ§ Г ГЄГЄГ ГіГ­ГІГ ");
         user.add(logout);
-        final JMenuItem admin = new JMenuItem("Панель управления");
+        final JMenuItem admin = new JMenuItem("ГЏГ Г­ГҐГ«Гј ГіГЇГ°Г ГўГ«ГҐГ­ГЁГї");
         user.add(admin);
         admin.setVisible(false);
 
-        final JFrame admin_panel = new JFrame("Панель управления");
+        final JFrame admin_panel = new JFrame("ГЏГ Г­ГҐГ«Гј ГіГЇГ°Г ГўГ«ГҐГ­ГЁГї");
         admin_panel.setLayout(null);
         admin_panel.setSize(365, 450);
         admin_panel.setResizable(false);
         admin_panel.setLocationRelativeTo(null);
 
-        JLabel color_label = new JLabel("Изменить цвет");
+        JLabel color_label = new JLabel("Г€Г§Г¬ГҐГ­ГЁГІГј Г¶ГўГҐГІ");
         color_label.setBounds(100,270,100,20);
         admin_panel.add(color_label);
 
-        String[] colors = {"Стандартный","Красный","Желтый","Зеленый","Розовый"};
+        String[] colors = {"Г‘ГІГ Г­Г¤Г Г°ГІГ­Г»Г©","ГЉГ°Г Г±Г­Г»Г©","Г†ГҐГ«ГІГ»Г©","Г‡ГҐГ«ГҐГ­Г»Г©","ГђГ®Г§Г®ГўГ»Г©"};
         final JComboBox color = new JComboBox(colors);
         color.setBounds(100, 290, 150, 30);
         admin_panel.add(color);
 
-        JLabel p1_label = new JLabel("Бумага");
+        JLabel p1_label = new JLabel("ГЃГіГ¬Г ГЈГ ");
         p1_label.setBounds(20,30,200,20);
         admin_panel.add(p1_label);
 
-        JLabel f1_label = new JLabel("Формат");
+        JLabel f1_label = new JLabel("Г”Г®Г°Г¬Г ГІ");
         f1_label.setBounds(20,90,200,20);
         admin_panel.add(f1_label);
 
-        JLabel perf_label = new JLabel("Перфорация");
+        JLabel perf_label = new JLabel("ГЏГҐГ°ГґГ®Г°Г Г¶ГЁГї");
         perf_label.setBounds(20,150,200,20);
         admin_panel.add(perf_label);
 
-        JLabel type1_label = new JLabel("Тип печати");
+        JLabel type1_label = new JLabel("Г’ГЁГЇ ГЇГҐГ·Г ГІГЁ");
         type1_label.setBounds(20,210,200,20);
         admin_panel.add(type1_label);
 
-        JLabel p2_label = new JLabel("Бумага");
+        JLabel p2_label = new JLabel("ГЃГіГ¬Г ГЈГ ");
         p2_label.setBounds(180,30,200,20);
         admin_panel.add(p2_label);
 
-        JLabel f2_label = new JLabel("Формат");
+        JLabel f2_label = new JLabel("Г”Г®Г°Г¬Г ГІ");
         f2_label.setBounds(180,90,60,20);
         admin_panel.add(f2_label);
 
-        JLabel angles_label = new JLabel("Ламинация");
+        JLabel angles_label = new JLabel("Г‹Г Г¬ГЁГ­Г Г¶ГЁГї");
         angles_label.setBounds(180,150,80,20);
         admin_panel.add(angles_label);
 
-        JLabel lam_label = new JLabel("Скр. углов");
+        JLabel lam_label = new JLabel("Г‘ГЄГ°. ГіГЈГ«Г®Гў");
         lam_label.setBounds(260,150,80,20);
         admin_panel.add(lam_label);
 
-        JLabel type2_label = new JLabel("Тип печати");
+        JLabel type2_label = new JLabel("Г’ГЁГЇ ГЇГҐГ·Г ГІГЁ");
         type2_label.setBounds(180,210,200,20);
         admin_panel.add(type2_label);
 
-        JLabel leaf_label = new JLabel("Листовки");
+        JLabel leaf_label = new JLabel("Г‹ГЁГ±ГІГ®ГўГЄГЁ");
         leaf_label.setBounds(20,5,200,20);
         admin_panel.add(leaf_label);
 
-        JLabel bc_label = new JLabel("Визитки");
+        JLabel bc_label = new JLabel("Г‚ГЁГ§ГЁГІГЄГЁ");
         bc_label.setBounds(180,5,200,20);
         admin_panel.add(bc_label);
 
@@ -226,7 +226,7 @@ public class Calc extends JFrame {
             }
         });
 
-        JLabel tiraj_text2 = new JLabel("Тираж");
+        JLabel tiraj_text2 = new JLabel("Г’ГЁГ°Г Г¦");
         tiraj_text2.setBounds(150, 45, 200, 15);
         contents.add(tiraj_text2);
 
@@ -237,11 +237,11 @@ public class Calc extends JFrame {
         contents.add(tiraj_field);
         tiraj_field.setEnabled(false);
 
-        final JCheckBox leaflets = new JCheckBox("Листовки");
+        final JCheckBox leaflets = new JCheckBox("Г‹ГЁГ±ГІГ®ГўГЄГЁ");
         leaflets.setBounds (160,15,100,25);
         contents.add(leaflets);
 
-        final JCheckBox bcards = new JCheckBox("Визитки");
+        final JCheckBox bcards = new JCheckBox("Г‚ГЁГ§ГЁГІГЄГЁ");
         bcards.setBounds(260,15,80,25);
         contents.add(bcards);
 
@@ -249,7 +249,7 @@ public class Calc extends JFrame {
         bcards.setEnabled(true);
 
         final JFrame fauth = new JFrame("subversion");
-        fauth.setTitle ("Авторизация");
+        fauth.setTitle ("ГЂГўГІГ®Г°ГЁГ§Г Г¶ГЁГї");
         fauth.setBounds(500,400,400,400);
         fauth.setLocationRelativeTo(null);
         fauth.setResizable(false);
@@ -273,7 +273,7 @@ public class Calc extends JFrame {
         login.setBounds(100,20,200,25);
         main_panel2.add(login);
 
-        JLabel login_label = new JLabel("Логин:");
+        JLabel login_label = new JLabel("Г‹Г®ГЈГЁГ­:");
         login_label.setBounds(40,20,600,20);
         main_panel2.add(login_label);
 
@@ -281,11 +281,11 @@ public class Calc extends JFrame {
         pass.setBounds(100,60,200,25);
         main_panel2.add(pass);
 
-        JLabel pass_label = new JLabel("Пароль:");
+        JLabel pass_label = new JLabel("ГЏГ Г°Г®Г«Гј:");
         pass_label.setBounds(40,60,600,20);
         main_panel2.add(pass_label);
 
-        JButton enter = new JButton("Вход");
+        JButton enter = new JButton("Г‚ГµГ®Г¤");
         enter.setBounds(150, 110, 100, 25);
         main_panel2.add(enter);
 
@@ -323,7 +323,7 @@ public class Calc extends JFrame {
                     login.setText("");
                     pass.setText("");
                 } else {
-                    JOptionPane.showMessageDialog(null, "Неверный логин или пароль.", "Внимание", JOptionPane.ERROR_MESSAGE);
+                    JOptionPane.showMessageDialog(null, "ГЌГҐГўГҐГ°Г­Г»Г© Г«Г®ГЈГЁГ­ ГЁГ«ГЁ ГЇГ Г°Г®Г«Гј.", "Г‚Г­ГЁГ¬Г Г­ГЁГҐ", JOptionPane.ERROR_MESSAGE);
                     pass.setText("");
                 }
             }
@@ -355,7 +355,7 @@ public class Calc extends JFrame {
             }
         });
 
-        JButton apply = new JButton("Применить");
+        JButton apply = new JButton("ГЏГ°ГЁГ¬ГҐГ­ГЁГІГј");
         apply.setBounds(100,330,150,30);
         admin_panel.add(apply);
 
@@ -368,7 +368,7 @@ public class Calc extends JFrame {
         q.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                JOptionPane.showMessageDialog(null, "В полях необходимо ввести на сколько нунжо увеличить коэффициенты.", "", JOptionPane.INFORMATION_MESSAGE);
+                JOptionPane.showMessageDialog(null, "Г‚ ГЇГ®Г«ГїГµ Г­ГҐГ®ГЎГµГ®Г¤ГЁГ¬Г® ГўГўГҐГ±ГІГЁ Г­Г  Г±ГЄГ®Г«ГјГЄГ® Г­ГіГ­Г¦Г® ГіГўГҐГ«ГЁГ·ГЁГІГј ГЄГ®ГЅГґГґГЁГ¶ГЁГҐГ­ГІГ».", "", JOptionPane.INFORMATION_MESSAGE);
             }
         });
 
@@ -377,26 +377,26 @@ public class Calc extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 String color_switch = (String)color.getSelectedItem();
                 switch (color_switch) {
-                    case "Стандартный":
+                    case "Г‘ГІГ Г­Г¤Г Г°ГІГ­Г»Г©":
                         contents.setBackground(c);
                         break;
-                    case "Красный":
+                    case "ГЉГ°Г Г±Г­Г»Г©":
                         contents.setBackground(Color.red);
                         break;
-                    case "Желтый":
+                    case "Г†ГҐГ«ГІГ»Г©":
                         contents.setBackground(Color.yellow);
                         break;
-                    case "Зеленый":
+                    case "Г‡ГҐГ«ГҐГ­Г»Г©":
                         contents.setBackground(Color.green);
                         break;
-                    case "Розовый":
+                    case "ГђГ®Г§Г®ГўГ»Г©":
                         contents.setBackground(Color.pink);
                         break;
                 }
             }
         });
 
-        JButton back = new JButton("Назад");
+        JButton back = new JButton("ГЌГ Г§Г Г¤");
         back.setBounds(100, 370, 150, 30);
         admin_panel.add(back);
 
@@ -411,101 +411,101 @@ public class Calc extends JFrame {
 
         fauth.setSize(400,180);
 
-        String[] ch_paper = {"--ВЫБЕРИТЕ--","105гр мелованная","170гр мелованная","300гр мелованная","80гр офсетная"};
+        String[] ch_paper = {"--Г‚Г›ГЃГ…ГђГ€Г’Г…--","105ГЈГ° Г¬ГҐГ«Г®ГўГ Г­Г­Г Гї","170ГЈГ° Г¬ГҐГ«Г®ГўГ Г­Г­Г Гї","300ГЈГ° Г¬ГҐГ«Г®ГўГ Г­Г­Г Гї","80ГЈГ° Г®ГґГ±ГҐГІГ­Г Гї"};
         final JComboBox paper = new JComboBox(ch_paper);
         paper.setBounds(20, 110, 200, 25);
         contents.add(paper);
         paper.setEnabled(false);
 
-        String[] ch_paper2 = {"--ВЫБЕРИТЕ--","200гр глянцевая","300гр глянцевая","200гр матовая","300гр матовая"};
+        String[] ch_paper2 = {"--Г‚Г›ГЃГ…ГђГ€Г’Г…--","200ГЈГ° ГЈГ«ГїГ­Г¶ГҐГўГ Гї","300ГЈГ° ГЈГ«ГїГ­Г¶ГҐГўГ Гї","200ГЈГ° Г¬Г ГІГ®ГўГ Гї","300ГЈГ° Г¬Г ГІГ®ГўГ Гї"};
         final JComboBox paper2 = new JComboBox(ch_paper2);
         paper2.setBounds(250, 110, 200, 25);
         contents.add(paper2);
         paper2.setEnabled(false);
 
-        String[] ch_phormat_leaflets = {"--ВЫБЕРИТЕ--","A4","A5","A6","A7"};
+        String[] ch_phormat_leaflets = {"--Г‚Г›ГЃГ…ГђГ€Г’Г…--","A4","A5","A6","A7"};
         final JComboBox ch_phormat_leaflets2 = new JComboBox(ch_phormat_leaflets);
         ch_phormat_leaflets2.setBounds  (20, 160, 200, 25);
         contents.add(ch_phormat_leaflets2);
         ch_phormat_leaflets2.setEnabled(false);
 
-        String[] ch_phormat_bcards = {"--ВЫБЕРИТЕ--","Стандарт (50х90мм)","Евро (55х85мм)"};
+        String[] ch_phormat_bcards = {"--Г‚Г›ГЃГ…ГђГ€Г’Г…--","Г‘ГІГ Г­Г¤Г Г°ГІ (50Гµ90Г¬Г¬)","Г…ГўГ°Г® (55Гµ85Г¬Г¬)"};
         final JComboBox ch_phormat_bcards2 = new JComboBox(ch_phormat_bcards);
         ch_phormat_bcards2.setBounds(250, 160, 200, 25);
         contents.add(ch_phormat_bcards2);
         ch_phormat_bcards2.setEnabled(false);
 
-        JLabel perforation_text = new JLabel("Перфорация");
+        JLabel perforation_text = new JLabel("ГЏГҐГ°ГґГ®Г°Г Г¶ГЁГї");
         perforation_text.setBounds(20, 195, 200, 15);
         contents.add(perforation_text);
 
-        String[] ch_perforation = {"--ВЫБЕРИТЕ--","1 сгиб/линия","2 сгиба/линии","3 сгиба/линии","4 сгиба/линии"};
+        String[] ch_perforation = {"--Г‚Г›ГЃГ…ГђГ€Г’Г…--","1 Г±ГЈГЁГЎ/Г«ГЁГ­ГЁГї","2 Г±ГЈГЁГЎГ /Г«ГЁГ­ГЁГЁ","3 Г±ГЈГЁГЎГ /Г«ГЁГ­ГЁГЁ","4 Г±ГЈГЁГЎГ /Г«ГЁГ­ГЁГЁ"};
         final JComboBox ch_perforation2 = new JComboBox(ch_perforation);
         ch_perforation2.setBounds(20, 210, 200, 25);
         contents.add(ch_perforation2);
         ch_perforation2.setEnabled(false);
 
-        JLabel color_text = new JLabel("Доп. обработка");
+        JLabel color_text = new JLabel("Г„Г®ГЇ. Г®ГЎГ°Г ГЎГ®ГІГЄГ ");
         color_text.setBounds(250, 195, 200, 15);
         contents.add(color_text);
 
-        final JCheckBox lamination = new JCheckBox("Ламинация");
+        final JCheckBox lamination = new JCheckBox("Г‹Г Г¬ГЁГ­Г Г¶ГЁГї");
         lamination .setBounds(250,210,90,25);
         contents.add(lamination);
         lamination.setEnabled(false);
 
-        final JCheckBox angles = new JCheckBox("Скругление углов");
+        final JCheckBox angles = new JCheckBox("Г‘ГЄГ°ГіГЈГ«ГҐГ­ГЁГҐ ГіГЈГ«Г®Гў");
         angles .setBounds(340,210,130,25);
         contents.add(angles);
         angles.setEnabled(false);
 
-        JLabel print_type = new JLabel("Тип печати");
+        JLabel print_type = new JLabel("Г’ГЁГЇ ГЇГҐГ·Г ГІГЁ");
         print_type.setBounds(20, 245, 200, 15);
         contents.add(print_type);
 
-        String[] ch_type_leaflets = {"--ВЫБЕРИТЕ--","4+4 (двусторонняя)","4+0 (односторонняя)","1+0 (ч/б односторонняя)","1+1 (ч/б двусторонняя)"};
+        String[] ch_type_leaflets = {"--Г‚Г›ГЃГ…ГђГ€Г’Г…--","4+4 (Г¤ГўГіГ±ГІГ®Г°Г®Г­Г­ГїГї)","4+0 (Г®Г¤Г­Г®Г±ГІГ®Г°Г®Г­Г­ГїГї)","1+0 (Г·/ГЎ Г®Г¤Г­Г®Г±ГІГ®Г°Г®Г­Г­ГїГї)","1+1 (Г·/ГЎ Г¤ГўГіГ±ГІГ®Г°Г®Г­Г­ГїГї)"};
         final JComboBox ch_type_leaflets2 = new JComboBox(ch_type_leaflets);
         ch_type_leaflets2.setBounds(20, 260, 200, 25);
         contents.add(ch_type_leaflets2);
         ch_type_leaflets2.setEnabled(false);
 
-        JLabel print_type2 = new JLabel("Тип печати");
+        JLabel print_type2 = new JLabel("Г’ГЁГЇ ГЇГҐГ·Г ГІГЁ");
         print_type2.setBounds(250, 245, 200, 15);
         contents.add(print_type2);
 
-        String[] ch_type_bcards = {"--ВЫБЕРИТЕ--","4+4 (двусторонняя)","4+0 (односторонняя)","1+0 (ч/б односторонняя)","1+1 (ч/б двусторонняя)"};
+        String[] ch_type_bcards = {"--Г‚Г›ГЃГ…ГђГ€Г’Г…--","4+4 (Г¤ГўГіГ±ГІГ®Г°Г®Г­Г­ГїГї)","4+0 (Г®Г¤Г­Г®Г±ГІГ®Г°Г®Г­Г­ГїГї)","1+0 (Г·/ГЎ Г®Г¤Г­Г®Г±ГІГ®Г°Г®Г­Г­ГїГї)","1+1 (Г·/ГЎ Г¤ГўГіГ±ГІГ®Г°Г®Г­Г­ГїГї)"};
         final JComboBox ch_type_bcards2 = new JComboBox(ch_type_bcards);
         ch_type_bcards2.setBounds(250, 260, 200, 25);
         contents.add(ch_type_bcards2);
         ch_type_bcards2.setEnabled(false);
 
-        JLabel card = new JLabel("Дисконтная карта (15% скидка)");
+        JLabel card = new JLabel("Г„ГЁГ±ГЄГ®Г­ГІГ­Г Гї ГЄГ Г°ГІГ  (15% Г±ГЄГЁГ¤ГЄГ )");
         card.setBounds(135, 310, 232, 15);
         contents.add(card);
 
-        card_y = new JCheckBox("Есть");
+        card_y = new JCheckBox("Г…Г±ГІГј");
         card_y.setBounds(135, 325, 75, 25);
         contents.add(card_y);
         card_y.setEnabled(false);
 
-        card_n = new JCheckBox("Нет", true);
+        card_n = new JCheckBox("ГЌГҐГІ", true);
         card_n.setBounds(230, 325, 75, 25);
         contents.add(card_n);
         card_n.setEnabled(false);
 
-        JLabel size_leaflets = new JLabel("Формат");
+        JLabel size_leaflets = new JLabel("Г”Г®Г°Г¬Г ГІ");
         size_leaflets.setBounds(250, 145, 200, 15);
         contents.add(size_leaflets);
 
-        JLabel size_bcards = new JLabel("Формат");
+        JLabel size_bcards = new JLabel("Г”Г®Г°Г¬Г ГІ");
         size_bcards.setBounds(20, 145, 200, 15);
         contents.add(size_bcards);
 
-        JLabel material_leaflets = new JLabel("Бумага");
+        JLabel material_leaflets = new JLabel("ГЃГіГ¬Г ГЈГ ");
         material_leaflets.setBounds(250, 95, 200, 15);
         contents.add(material_leaflets);
 
-        JLabel material_bcards = new JLabel("Бумага");
+        JLabel material_bcards = new JLabel("ГЃГіГ¬Г ГЈГ ");
         material_bcards.setBounds(20, 95, 200, 15);
         contents.add(material_bcards);
 
@@ -588,7 +588,7 @@ public class Calc extends JFrame {
             }
         });
 
-        JLabel result_text = new JLabel("Стоимость производства рекламных материалов:");
+        JLabel result_text = new JLabel("Г‘ГІГ®ГЁГ¬Г®Г±ГІГј ГЇГ°Г®ГЁГ§ГўГ®Г¤Г±ГІГўГ  Г°ГҐГЄГ«Г Г¬Г­Г»Гµ Г¬Г ГІГҐГ°ГЁГ Г«Г®Гў:");
         result_text.setBounds(90,355,352,30);
         contents.add(result_text);
 
@@ -598,16 +598,16 @@ public class Calc extends JFrame {
         result.setEditable(false);
         contents.add(result);
 
-        final JButton calculate = new JButton("Рассчитать");
+        final JButton calculate = new JButton("ГђГ Г±Г±Г·ГЁГІГ ГІГј");
         calculate.setBounds(160, 420, 150, 30);
         contents.add(calculate);
         calculate.setEnabled(false);
 
-        final JButton close = new JButton("ВЫХОД");
+        final JButton close = new JButton("Г‚Г›Г•ГЋГ„");
         close.setBounds(160, 460, 150, 30);
         contents.add(close);
 
-        final JButton info = new JButton("Информация");
+        final JButton info = new JButton("Г€Г­ГґГ®Г°Г¬Г Г¶ГЁГї");
         info.setBounds(160, 500, 150, 30);
         ActionListener informationListener = new Info();
         info.addActionListener(informationListener);
@@ -718,19 +718,19 @@ public class Calc extends JFrame {
 
                 String msg = (String)paper.getSelectedItem();
                 switch (msg) {
-                    case "--ВЫБЕРИТЕ--":
+                    case "--Г‚Г›ГЃГ…ГђГ€Г’Г…--":
                         leaflets_pap.setPrice(0+p1_val);
                         break;
-                    case "105гр мелованная":
+                    case "105ГЈГ° Г¬ГҐГ«Г®ГўГ Г­Г­Г Гї":
                         leaflets_pap.setPrice(2+p1_val);
                         break;
-                    case "170гр мелованная":
+                    case "170ГЈГ° Г¬ГҐГ«Г®ГўГ Г­Г­Г Гї":
                         leaflets_pap.setPrice(3+p1_val);
                         break;
-                    case "300гр мелованная":
+                    case "300ГЈГ° Г¬ГҐГ«Г®ГўГ Г­Г­Г Гї":
                         leaflets_pap.setPrice(4+p1_val);
                         break;
-                    case "80гр офсетная":
+                    case "80ГЈГ° Г®ГґГ±ГҐГІГ­Г Гї":
                         leaflets_pap.setPrice(5+p1_val);
                         break;
 
@@ -738,19 +738,19 @@ public class Calc extends JFrame {
 
                 String msg2 = (String)paper2.getSelectedItem();
                 switch (msg2) {
-                    case "--ВЫБЕРИТЕ--":
+                    case "--Г‚Г›ГЃГ…ГђГ€Г’Г…--":
                         bcards_pap.setPrice(0+paper2_val);
                         break;
-                    case "200гр глянцевая":
+                    case "200ГЈГ° ГЈГ«ГїГ­Г¶ГҐГўГ Гї":
                         bcards_pap.setPrice(1+paper2_val);
                         break;
-                    case "300гр глянцевая":
+                    case "300ГЈГ° ГЈГ«ГїГ­Г¶ГҐГўГ Гї":
                         bcards_pap.setPrice(5+paper2_val);
                         break;
-                    case "200гр матовая":
+                    case "200ГЈГ° Г¬Г ГІГ®ГўГ Гї":
                         bcards_pap.setPrice(2+paper2_val);
                         break;
-                    case "300гр матовая":
+                    case "300ГЈГ° Г¬Г ГІГ®ГўГ Гї":
                         bcards_pap.setPrice(6+paper2_val);
                         break;
 
@@ -761,7 +761,7 @@ public class Calc extends JFrame {
 
                 String msg3 = (String)ch_phormat_leaflets2.getSelectedItem();
                 switch (msg3) {
-                    case "--ВЫБЕРИТЕ--":
+                    case "--Г‚Г›ГЃГ…ГђГ€Г’Г…--":
                         ph_leaflets.setPrice(0+f1_val);
                         break;
                     case "A4":
@@ -781,13 +781,13 @@ public class Calc extends JFrame {
 
                 String msg4 = (String)ch_phormat_bcards2.getSelectedItem();
                 switch (msg4) {
-                    case "--ВЫБЕРИТЕ--":
+                    case "--Г‚Г›ГЃГ…ГђГ€Г’Г…--":
                         ph_bcards.setPrice(0+f2_val);
                         break;
-                    case "Стандарт (50х90мм)":
+                    case "Г‘ГІГ Г­Г¤Г Г°ГІ (50Гµ90Г¬Г¬)":
                         ph_bcards.setPrice(10+f2_val);
                         break;
-                    case "Евро (55х85мм)":
+                    case "Г…ГўГ°Г® (55Гµ85Г¬Г¬)":
                         ph_bcards.setPrice(9+f2_val);
                         break;
 
@@ -797,19 +797,19 @@ public class Calc extends JFrame {
 
                 String msg5 = (String)ch_perforation2.getSelectedItem();
                 switch (msg5) {
-                    case "--ВЫБЕРИТЕ--":
+                    case "--Г‚Г›ГЃГ…ГђГ€Г’Г…--":
                         per.setPrice(0+perf_val);
                         break;
-                    case "1 сгиб/линия":
+                    case "1 Г±ГЈГЁГЎ/Г«ГЁГ­ГЁГї":
                         per.setPrice(2+perf_val);
                         break;
-                    case "2 сгиба/линии":
+                    case "2 Г±ГЈГЁГЎГ /Г«ГЁГ­ГЁГЁ":
                         per.setPrice(4+perf_val);
                         break;
-                    case "3 сгиба/линии":
+                    case "3 Г±ГЈГЁГЎГ /Г«ГЁГ­ГЁГЁ":
                         per.setPrice(6+perf_val);
                         break;
-                    case "4 сгиба/линии":
+                    case "4 Г±ГЈГЁГЎГ /Г«ГЁГ­ГЁГЁ":
                         per.setPrice(8+perf_val);
                         break;
 
@@ -821,19 +821,19 @@ public class Calc extends JFrame {
 
                 String msg6 = (String)ch_type_leaflets2.getSelectedItem();
                 switch (msg6) {
-                    case "--ВЫБЕРИТЕ--":
+                    case "--Г‚Г›ГЃГ…ГђГ€Г’Г…--":
                         t_leaflets.setPrice(0+type1_val);
                         break;
-                    case "4+4 (двусторонняя)":
+                    case "4+4 (Г¤ГўГіГ±ГІГ®Г°Г®Г­Г­ГїГї)":
                         t_leaflets.setPrice(10+type1_val);
                         break;
-                    case "4+0 (односторонняя)":
+                    case "4+0 (Г®Г¤Г­Г®Г±ГІГ®Г°Г®Г­Г­ГїГї)":
                         t_leaflets.setPrice(5+type1_val);
                         break;
-                    case "1+0 (ч/б односторонняя)":
+                    case "1+0 (Г·/ГЎ Г®Г¤Г­Г®Г±ГІГ®Г°Г®Г­Г­ГїГї)":
                         t_leaflets.setPrice(2+type1_val);
                         break;
-                    case "1+1 (ч/б двусторонняя)":
+                    case "1+1 (Г·/ГЎ Г¤ГўГіГ±ГІГ®Г°Г®Г­Г­ГїГї)":
                         t_leaflets.setPrice(1+type1_val);
                         break;
 
@@ -841,19 +841,19 @@ public class Calc extends JFrame {
 
                 String msg7 = (String)ch_type_bcards2.getSelectedItem();
                 switch (msg7) {
-                    case "--ВЫБЕРИТЕ--":
+                    case "--Г‚Г›ГЃГ…ГђГ€Г’Г…--":
                         t_bcards.setPrice(0+t2_val);
                         break;
-                    case "4+4 (двусторонняя)":
+                    case "4+4 (Г¤ГўГіГ±ГІГ®Г°Г®Г­Г­ГїГї)":
                         t_bcards.setPrice(9+t2_val);
                         break;
-                    case "4+0 (односторонняя)":
+                    case "4+0 (Г®Г¤Г­Г®Г±ГІГ®Г°Г®Г­Г­ГїГї)":
                         t_bcards.setPrice(4+t2_val);
                         break;
-                    case "1+0 (ч/б односторонняя)":
+                    case "1+0 (Г·/ГЎ Г®Г¤Г­Г®Г±ГІГ®Г°Г®Г­Г­ГїГї)":
                         t_bcards.setPrice(3+t2_val);
                         break;
-                    case "1+1 (ч/б двусторонняя)":
+                    case "1+1 (Г·/ГЎ Г¤ГўГіГ±ГІГ®Г°Г®Г­Г­ГїГї)":
                         t_bcards.setPrice(1+t2_val);
                         break;
 
@@ -944,14 +944,14 @@ public class Calc extends JFrame {
                     final int finalPhormat_leaflets_val1 = phormat_leaflets_val;
                     final int finalPerforation_val1 = perforation_val;
                     final int finalType_leaflets_val1 = type_leaflets_val;
-                    /*pdf.addActionListener(new ActionListener() {
+                    pdf.addActionListener(new ActionListener() {
                         @Override
                         public void actionPerformed(ActionEvent e) {
                             try {
 
-                                JOptionPane.showMessageDialog(null, "Успешно!", "Выгрузить в PDF", JOptionPane.INFORMATION_MESSAGE);
+                                JOptionPane.showMessageDialog(null, "Г“Г±ГЇГҐГёГ­Г®!", "Г‚Г»ГЈГ°ГіГ§ГЁГІГј Гў PDF", JOptionPane.INFORMATION_MESSAGE);
 
-                                String file_name = "Итог.pdf";
+                                String file_name = "Г€ГІГ®ГЈ.pdf";
                                 Document doc = new Document();
 
                                 PdfWriter.getInstance(doc, new FileOutputStream(file_name));
@@ -982,15 +982,15 @@ public class Calc extends JFrame {
                             }
 
                             try {
-                                desktop.open(new File("Итог.pdf"));
+                                desktop.open(new File("Г€ГІГ®ГЈ.pdf"));
                             } catch (IOException ioe) {
                                 ioe.printStackTrace();
                             }
 
                         }
-                    });*/
+                    });
 
-                    result.setText(rez1_value+" Рублей");
+                    result.setText(rez1_value+" ГђГіГЎГ«ГҐГ©");
                     discount = 0;
                     mn_size_leaflets = 0;
                     return;
@@ -1007,14 +1007,14 @@ public class Calc extends JFrame {
                     final int finalType_bcards_val = type_bcards_val;
                     final int finalLam_val = lam_val;
                     final int finalAng_val = ang_val;
-                    /*pdf.addActionListener(new ActionListener() {
+                    pdf.addActionListener(new ActionListener() {
                         @Override
                         public void actionPerformed(ActionEvent e) {
                             try {
 
-                                JOptionPane.showMessageDialog(null, "Успешно!", "Выгрузить в PDF", JOptionPane.INFORMATION_MESSAGE);
+                                JOptionPane.showMessageDialog(null, "Г“Г±ГЇГҐГёГ­Г®!", "Г‚Г»ГЈГ°ГіГ§ГЁГІГј Гў PDF", JOptionPane.INFORMATION_MESSAGE);
 
-                                String file_name = "Итог.pdf";
+                                String file_name = "Г€ГІГ®ГЈ.pdf";
                                 Document doc = new Document();
 
                                 PdfWriter.getInstance(doc, new FileOutputStream(file_name));
@@ -1033,9 +1033,6 @@ public class Calc extends JFrame {
                                         "\nSkidka: " + discount +
                                         "\nCena: " + rez4_value);
 
-
-                                //para.setFont(font);
-
                                 doc.add(para);
                                 doc.close();
 
@@ -1053,14 +1050,14 @@ public class Calc extends JFrame {
                             }
 
                             try {
-                                desktop.open(new File("Итог.pdf"));
+                                desktop.open(new File("Г€ГІГ®ГЈ.pdf"));
                             } catch (IOException ioe) {
                                 ioe.printStackTrace();
                             }
 
                         }
-                    });*/
-                    result.setText(rez4_value+" Рублей");
+                    });
+                    result.setText(rez4_value+" ГђГіГЎГ«ГҐГ©");
                     discount = 0;
                     mn_size_bcards = 0;
                     return;
