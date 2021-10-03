@@ -1,3 +1,4 @@
+package team28;
 public abstract class UDB {
     String login, pass, role;
 
