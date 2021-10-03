@@ -6,7 +6,7 @@ import javax.swing.*;
 
 public class Info implements ActionListener {
 
-	String madeby = "Разработчики", u2 = "Тукаев А.И. - Разработчик 1", u3 = "Филатов И.М. - Разработчик 2", u4 = "Куликова А.О. - Разработчик 3";
+	public String madeby = "Разработчики", u2 = "Тукаев А.И. - Разработчик 1", u3 = "Филатов И.М. - Разработчик 2", u4 = "Куликова А.О. - Разработчик 3";
 
 	public void actionPerformed(ActionEvent arg0) {
 
