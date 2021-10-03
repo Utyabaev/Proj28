@@ -1,26 +1,26 @@
 package team28;
-import javax.swing.*;
 
+import javax.swing.*;
 
 
 public class Error_msg implements Error {
 	public void crash_tiraj() {
-		JOptionPane.showMessageDialog(null, "Тираж должен быть больше одного!", "Внимание", JOptionPane.ERROR_MESSAGE);
-		}
+		JOptionPane.showMessageDialog(null, "РўРёСЂР°Р¶ РґРѕР»Р¶РµРЅ Р±С‹С‚СЊ Р±РѕР»СЊС€Рµ РѕРґРЅРѕРіРѕ!", "Р’РЅРёРјР°РЅРёРµ", JOptionPane.ERROR_MESSAGE);
+	}
 
-		public void crash_paper() {
-		JOptionPane.showMessageDialog(null, "Выберите тип бумаги!", "Внимание", JOptionPane.ERROR_MESSAGE);
-		}
+	public void crash_paper() {
+		JOptionPane.showMessageDialog(null, "Р’С‹Р±РµСЂРёС‚Рµ С‚РёРї Р±СѓРјР°РіРё!", "Р’РЅРёРјР°РЅРёРµ", JOptionPane.ERROR_MESSAGE);
+	}
 
-		public void crash_phormat() {
-		JOptionPane.showMessageDialog(null, "Выберите формат!", "Внимание", JOptionPane.ERROR_MESSAGE);
-		}
+	public void crash_phormat() {
+		JOptionPane.showMessageDialog(null, "Р’С‹Р±РµСЂРёС‚Рµ С„РѕСЂРјР°С‚!", "Р’РЅРёРјР°РЅРёРµ", JOptionPane.ERROR_MESSAGE);
+	}
 
-		public void crash_perforation() {
-		JOptionPane.showMessageDialog(null, "Выберите перфорацию!", "Внимание", JOptionPane.ERROR_MESSAGE);
-		}
+	public void crash_perforation() {
+		JOptionPane.showMessageDialog(null, "Р’С‹Р±РµСЂРёС‚Рµ РїРµСЂС„РѕСЂР°С†РёСЋ!", "Р’РЅРёРјР°РЅРёРµ", JOptionPane.ERROR_MESSAGE);
+	}
 
-		public void crash_type() {
-		JOptionPane.showMessageDialog(null, "Выберите тип печати!", "Внимание", JOptionPane.ERROR_MESSAGE);
-		}
+	public void crash_type() {
+		JOptionPane.showMessageDialog(null, "Р’С‹Р±РµСЂРёС‚Рµ С‚РёРї РїРµС‡Р°С‚Рё!", "Р’РЅРёРјР°РЅРёРµ", JOptionPane.ERROR_MESSAGE);
+	}
 }
