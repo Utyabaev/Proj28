@@ -1,28 +1,29 @@
 package team28;
 
+
 import javax.swing.*;
 import javax.swing.text.*;
-import java.awt.TextField;
-import java.io.*;
 import java.awt.event.*;
 import java.awt.FlowLayout;
 import java.awt.*;
-
-import com.itextpdf.text.*;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
 import com.itextpdf.text.Document;
+import com.itextpdf.text.DocumentException;
 import com.itextpdf.text.Font;
-import com.itextpdf.text.pdf.PdfWriter;
-import com.itextpdf.text.pdf.*;
+import com.itextpdf.text.Paragraph;
+import com.itextpdf.text.Phrase;
 import com.itextpdf.text.pdf.BaseFont;
-
+import com.itextpdf.text.pdf.PdfPTable;
+import com.itextpdf.text.pdf.PdfWriter;
 import java.io.File;
-import javax.swing.JFileChooser;
 
 public class Calc extends JFrame {
     private MyDocumentFilter documentFilter;
-    JTextField tiraj_field, tiraj_field2, result;
-    int mn_size_leaflets = 0,mn_size_bcards = 0, mn_format = 0, mn_lamination = 0, mn_color = 0, mn_product = 1; double discount = 0;
-    JCheckBox card_y, card_n, leaflets, bcards;
+    JTextField tiraj_field;
+    int mn_size_leaflets = 0,mn_size_bcards = 0; double discount = 0;
+    JCheckBox card_y, card_n;
     boolean test;
 
     public static double calc_bcards(int tiraj, int paper, int phormat, int lam, int ang, int type, int dis){
@@ -938,42 +939,69 @@ public class Calc extends JFrame {
                     double rez1 = rezz1 - rezz1 * discount;
                     final String rez1_value = ""+rez1;
 
-                    final int finalTiraj_val1 = tiraj_val;
-                    final int finalPaper_leaflets_val1 = paper_leaflets_val;
-                    final int finalPhormat_leaflets_val1 = phormat_leaflets_val;
-                    final int finalPerforation_val1 = perforation_val;
-                    final int finalType_leaflets_val1 = type_leaflets_val;
+                    final String finalrez1_value = rez1_value;
+                    final double finalDiscount = rezz1*discount;
+
+                    int finalTiraj_val = tiraj_val;
+                    int finalPaper_leaflets_val = paper_leaflets_val * tiraj_val;
+                    int finalPhormat_leaflets_val = phormat_leaflets_val * tiraj_val;
+                    int finalPerforation_val = perforation_val * tiraj_val;
+                    int finalType_leaflets_val = type_leaflets_val * tiraj_val;
                     pdf.addActionListener(new ActionListener() {
                         @Override
                         public void actionPerformed(ActionEvent e) {
+                            Document document = new Document();
                             try {
+                                PdfWriter.getInstance(document, new FileOutputStream("Итог.pdf"));
+                            } catch (FileNotFoundException | DocumentException ee) {
+                                ee.printStackTrace();
+                            }
 
-                                JOptionPane.showMessageDialog(null, "Успешно!", "Выгрузить в PDF", JOptionPane.INFORMATION_MESSAGE);
+                            JOptionPane.showMessageDialog(null, "Успешно!", "Выгрузить в PDF", JOptionPane.INFORMATION_MESSAGE);
 
-                                String file_name = "Итог.pdf";
-                                Document doc = new Document();
+                            document.open();
 
-                                PdfWriter.getInstance(doc, new FileOutputStream(file_name));
+                            BaseFont times = null;
+                            try {
+                                times = BaseFont.createFont("src/main/resources/fonts/times.ttf", "cp1251", BaseFont.EMBEDDED);
+                            } catch (DocumentException | IOException ee) {
+                                ee.printStackTrace();
+                            }
 
-                                doc.open();
+                            String string_pdf = "Вариант 28. Калькулятор стоимости производства рекламных материалов. Полиграфия";
+                            Paragraph paragraph = new Paragraph();
+                            paragraph.add(new Paragraph(string_pdf, new Font(times,14)));
 
-                                Font font = FontFactory.getFont(FontFactory.HELVETICA, "cp1251", BaseFont.EMBEDDED);
+                            String string_pdf2 = "Тип рекламного продукта: Листовки.";
+                            paragraph.add(new Paragraph(string_pdf2, new Font(times,14)));
 
-                                Paragraph para = new Paragraph("Listovki: " +
-                                        "\nTiraj: " + finalTiraj_val1 +
-                                        "\nBumaga: " + finalPaper_leaflets_val1 +
-                                        "\nFormat: " + finalPhormat_leaflets_val1 +
-                                        "\nPerforatsia: " + finalPerforation_val1 +
-                                        "\nTip: " + finalType_leaflets_val1 +
-                                        "\nSkidka: " + discount +
-                                        "\nCena: " + rez1_value, font);
-                                //para.setFont(font);
+                            try {
+                                document.add(paragraph);
+                            } catch (DocumentException e1) {
+                                e1.printStackTrace();
+                            }
 
-                                doc.add(para);
-                                doc.close();
+                            final String finalTiraj_val1 = finalTiraj_val +  "";
 
-                            } catch (Exception ee) {
-                                System.err.println(ee);
+                            paragraph.clear();
+                            String string_pdf3 = "Тираж: " + finalTiraj_val1;
+                            paragraph.add(new Paragraph(string_pdf3, new Font(times,14)));
+                            String string_pdf4 = " ";
+                            paragraph.add(new Paragraph(string_pdf4, new Font(times,14)));
+
+                            try {
+                                document.add(paragraph);
+                            } catch (DocumentException e1) {
+                                e1.printStackTrace();
+                            }
+
+                            PdfPTable table = new PdfPTable(2);
+                            addColumns(table);
+
+                            try {
+                                document.add(table);
+                            } catch (DocumentException ee) {
+                                ee.printStackTrace();
                             }
 
                             Desktop desktop = null;
@@ -987,10 +1015,73 @@ public class Calc extends JFrame {
                                 ioe.printStackTrace();
                             }
 
-                        }
-                    });
+                            document.close();
 
-                    System.out.println(discount);
+                        }
+
+                        public void addColumns(PdfPTable table) {
+                            BaseFont times = null;
+                            try {
+                                times = BaseFont.createFont("src/main/resources/fonts/times.ttf", "cp1251", BaseFont.EMBEDDED);
+                            } catch (DocumentException | IOException ee) {
+                                ee.printStackTrace();
+                            }
+
+                            String cell1 = "null";
+                            String cell2 = "null";
+                            String cell5 = "null";
+                            String cell6 = "null";
+                            String cell7 = "null";
+                            String cell8 = "null";
+                            String cell9 = "null";
+                            String cell10 = "null";
+                            String cell11 = "null";
+                            String cell12 = "null";
+                            String cell13 = "null";
+                            String cell14 = "null";
+                            String cell15 = "null";
+                            String cell16 = "null";
+
+                            final String finalPaper_leaflets_val1 = finalPaper_leaflets_val + "";
+                            final String finalPhormat_leaflets_val1 = finalPhormat_leaflets_val + "";
+                            final String finalPerforation_val1 = finalPerforation_val + "";
+                            final String finalType_leaflets_val1 = finalType_leaflets_val + "";
+                            final String discount = finalDiscount + "";
+                            final String result = finalrez1_value;
+
+                            cell1 = " ";
+                            cell2 = "Цена(руб)";
+                            cell5 = "Бумага";
+                            cell6 = finalPaper_leaflets_val1;
+                            cell7 = "Формат";
+                            cell8 = finalPhormat_leaflets_val1;
+                            cell9 = "Перфорация";
+                            cell10 = finalPerforation_val1;
+                            cell11 = "Тип бумаги";
+                            cell12 = finalType_leaflets_val1;
+                            cell13 = "Скидка";
+                            cell14 = discount;
+                            cell15 = "ИТОГ:";
+                            cell16 = result;
+
+                            table.addCell(new Phrase(cell1, new Font(times,14)));
+                            table.addCell(new Phrase(cell2, new Font(times,14)));
+                            table.addCell(new Phrase(cell5, new Font(times,14)));
+                            table.addCell(new Phrase(cell6, new Font(times,14)));
+                            table.addCell(new Phrase(cell7, new Font(times,14)));
+                            table.addCell(new Phrase(cell8, new Font(times,14)));
+                            table.addCell(new Phrase(cell9, new Font(times,14)));
+                            table.addCell(new Phrase(cell10, new Font(times,14)));
+                            table.addCell(new Phrase(cell11, new Font(times,14)));
+                            table.addCell(new Phrase(cell12, new Font(times,14)));
+                            table.addCell(new Phrase(cell13, new Font(times,14)));
+                            table.addCell(new Phrase(cell14, new Font(times,14)));
+                            table.addCell(new Phrase(cell15, new Font(times,14)));
+                            table.addCell(new Phrase(cell16, new Font(times,14)));
+
+                        }
+
+                    });
 
                     result.setText(rez1_value+" Рублей");
                     discount = 0;
@@ -1004,50 +1095,70 @@ public class Calc extends JFrame {
                     final String rez4_value = ""+rez4;
 
                     final int finalTiraj_val2 = tiraj_val;
-                    final int finalPaper_bcards_val = paper_bcards_val;
-                    final int finalPhormat_bcards_val = phormat_bcards_val;
-                    final int finalType_bcards_val = type_bcards_val;
-                    final int finalLam_val = lam_val;
-                    final int finalAng_val = ang_val;
+                    final int finalPaper_bcards_val = paper_bcards_val * tiraj_val;
+                    final int finalPhormat_bcards_val = phormat_bcards_val * tiraj_val;
+                    final int finalType_bcards_val = type_bcards_val * tiraj_val;
+                    final int finalLam_val = lam_val * tiraj_val;
+                    final int finalAng_val = ang_val * tiraj_val;
+                    final String finalrez1_value = rez4_value;
+                    final double finalDiscount = rez4 * discount;
+
                     pdf.addActionListener(new ActionListener() {
                         @Override
                         public void actionPerformed(ActionEvent e) {
+                            Document document = new Document();
                             try {
-
-                                JOptionPane.showMessageDialog(null, "Успешно!", "Выгрузить в PDF", JOptionPane.INFORMATION_MESSAGE);
-
-                                String file_name = "Итог.pdf";
-                                Document doc = new Document();
-
-                                PdfWriter.getInstance(doc, new FileOutputStream(file_name));
-
-                                doc.open();
-
-                                Font font = FontFactory.getFont(FontFactory.HELVETICA, "cp1251", BaseFont.EMBEDDED);
-
-                                Paragraph para = new Paragraph("Vizitki" +
-                                        "\nTiraj: " + finalTiraj_val2 +
-                                        "\nBumaga: " + finalPaper_bcards_val +
-                                        "\nFormat: " + finalPhormat_bcards_val +
-                                        "\nTip: " + finalType_bcards_val +
-                                        "\nLaminatsia: " + finalLam_val +
-                                        "\nSKruglenie Uglov: " + finalAng_val +
-                                        "\nSkidka: " + discount +
-                                        "\nCena: " + rez4_value);
-
-
-                                //para.setFont(font);
-
-                                doc.add(para);
-                                doc.close();
-
-                                para.clear();
-
-                            } catch (Exception ee) {
-                                System.err.println(ee);
+                                PdfWriter.getInstance(document, new FileOutputStream("Итог.pdf"));
+                            } catch (FileNotFoundException | DocumentException ee) {
+                                ee.printStackTrace();
                             }
 
-                            System.out.println(discount);
+                            JOptionPane.showMessageDialog(null, "Успешно!", "Выгрузить в PDF", JOptionPane.INFORMATION_MESSAGE);
+
+                            document.open();
+
+                            BaseFont times = null;
+                            try {
+                                times = BaseFont.createFont("src/main/resources/fonts/times.ttf", "cp1251", BaseFont.EMBEDDED);
+                            } catch (DocumentException | IOException ee) {
+                                ee.printStackTrace();
+                            }
+
+                            String string_pdf = "Вариант 28. Калькулятор стоимости производства рекламных материалов. Полиграфия";
+                            Paragraph paragraph = new Paragraph();
+                            paragraph.add(new Paragraph(string_pdf, new Font(times,14)));
+
+                            String string_pdf2 = "Тип рекламного продукта: Визитки.";
+                            paragraph.add(new Paragraph(string_pdf2, new Font(times,14)));
+
+                            try {
+                                document.add(paragraph);
+                            } catch (DocumentException e1) {
+                                e1.printStackTrace();
+                            }
+
+                            final String finalTiraj_val1 = finalTiraj_val2 +  "";
+
+                            paragraph.clear();
+                            String string_pdf3 = "Тираж: " + finalTiraj_val1;
+                            paragraph.add(new Paragraph(string_pdf3, new Font(times,14)));
+                            String string_pdf4 = " ";
+                            paragraph.add(new Paragraph(string_pdf4, new Font(times,14)));
+
+                            try {
+                                document.add(paragraph);
+                            } catch (DocumentException e1) {
+                                e1.printStackTrace();
+                            }
+
+                            PdfPTable table = new PdfPTable(2);
+                            addColumns(table);
+
+                            try {
+                                document.add(table);
+                            } catch (DocumentException ee) {
+                                ee.printStackTrace();
+                            }
 
                             Desktop desktop = null;
                             if (Desktop.isDesktopSupported()) {
@@ -1060,8 +1171,81 @@ public class Calc extends JFrame {
                                 ioe.printStackTrace();
                             }
 
+                            document.close();
+
                         }
+
+                        public void addColumns(PdfPTable table) {
+                            BaseFont times = null;
+                            try {
+                                times = BaseFont.createFont("src/main/resources/fonts/times.ttf", "cp1251", BaseFont.EMBEDDED);
+                            } catch (DocumentException | IOException ee) {
+                                ee.printStackTrace();
+                            }
+
+                            String cell1 = "null";
+                            String cell2 = "null";
+                            String cell5 = "null";
+                            String cell6 = "null";
+                            String cell7 = "null";
+                            String cell8 = "null";
+                            String cell9 = "null";
+                            String cell10 = "null";
+                            String cell11 = "null";
+                            String cell12 = "null";
+                            String cell13 = "null";
+                            String cell14 = "null";
+                            String cell15 = "null";
+                            String cell16 = "null";
+                            String cell17 = "null";
+                            String cell18 = "null";
+
+                            final String finalPaper_leaflets_val1 = finalPaper_bcards_val + "";
+                            final String finalPhormat_leaflets_val1 = finalPhormat_bcards_val + "";
+                            final String finalPerforation_val1 = finalType_bcards_val + "";
+                            final String finalType_leaflets_val1 = finalLam_val + "";
+                            final String finalAng_val1 = finalAng_val + "";
+                            final String discount = finalDiscount + "";
+                            final String result = finalrez1_value;
+
+                            cell1 = " ";
+                            cell2 = "Цена(руб)";
+                            cell5 = "Бумага";
+                            cell6 = finalPaper_leaflets_val1;
+                            cell7 = "Формат";
+                            cell8 = finalPhormat_leaflets_val1;
+                            cell9 = "Ламинация";
+                            cell10 = finalType_leaflets_val1;
+                            cell11 = "Скругление углов";
+                            cell12 = finalAng_val1;
+                            cell13 = "Тип печати";
+                            cell14 = finalPerforation_val1;
+                            cell15 = "Скидка";
+                            cell16 = discount;
+                            cell17 = "ИТОГ:";
+                            cell18 = result;
+
+                            table.addCell(new Phrase(cell1, new Font(times,14)));
+                            table.addCell(new Phrase(cell2, new Font(times,14)));
+                            table.addCell(new Phrase(cell5, new Font(times,14)));
+                            table.addCell(new Phrase(cell6, new Font(times,14)));
+                            table.addCell(new Phrase(cell7, new Font(times,14)));
+                            table.addCell(new Phrase(cell8, new Font(times,14)));
+                            table.addCell(new Phrase(cell9, new Font(times,14)));
+                            table.addCell(new Phrase(cell10, new Font(times,14)));
+                            table.addCell(new Phrase(cell11, new Font(times,14)));
+                            table.addCell(new Phrase(cell12, new Font(times,14)));
+                            table.addCell(new Phrase(cell13, new Font(times,14)));
+                            table.addCell(new Phrase(cell14, new Font(times,14)));
+                            table.addCell(new Phrase(cell15, new Font(times,14)));
+                            table.addCell(new Phrase(cell16, new Font(times,14)));
+                            table.addCell(new Phrase(cell17, new Font(times,14)));
+                            table.addCell(new Phrase(cell18, new Font(times,14)));
+
+                        }
+
                     });
+
                     result.setText(rez4_value+" Рублей");
                     discount = 0;
                     mn_size_bcards = 0;
@@ -1069,8 +1253,6 @@ public class Calc extends JFrame {
                 }
             }
         });
-
-
 
         setContentPane(contents);
 
@@ -1086,7 +1268,6 @@ public class Calc extends JFrame {
         frame.setLayout(null);
 
         contents.setVisible(true);
-        //frame.setVisible(true);
         fauth.setVisible(true);
         frame.setDefaultCloseOperation(EXIT_ON_CLOSE);
         fauth.setDefaultCloseOperation(EXIT_ON_CLOSE);
