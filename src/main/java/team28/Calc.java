@@ -1171,7 +1171,7 @@ public class Calc extends JFrame {
                                 ioe.printStackTrace();
                             }
 */
-                            document.close();
+                         /*   document.close();
 
                         }
 
