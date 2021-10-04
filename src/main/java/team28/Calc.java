@@ -1103,7 +1103,7 @@ public class Calc extends JFrame {
                     final String finalrez1_value = rez4_value;
                     final double finalDiscount = rez4 * discount;
 
-                    pdf.addActionListener(new ActionListener() {
+                   /* pdf.addActionListener(new ActionListener() {
                         @Override
                         public void actionPerformed(ActionEvent e) {
                             Document document = new Document();
@@ -1244,7 +1244,7 @@ public class Calc extends JFrame {
 
                         }
 
-                    });
+                    });*/
 
                     result.setText(rez4_value+" Рублей");
                     discount = 0;
