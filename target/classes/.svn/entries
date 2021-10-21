@@ -2,14 +2,14 @@
 
 dir
 159
-http://xn--e1afhkfagivn.xn--p1ai/svn/project28/trunk/rgr/target/classes
+http://xn--e1afhkfagivn.xn--p1ai/svn/project28/trunk/rgr/src/main/java
 http://xn--e1afhkfagivn.xn--p1ai/svn/project28
 
 
 
-2020-12-27T16:16:11.924725Z
-133
-user228
+2020-12-27T16:10:19.318393Z
+131
+user428
 
 
 svn:special svn:externals svn:needs-lock
@@ -25,4 +25,7 @@ svn:special svn:externals svn:needs-lock
 
 
 507a18e2-b3c0-400c-b16b-82e03e95350d
+
+rgr
+dir
 
