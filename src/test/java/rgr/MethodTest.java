@@ -7,28 +7,28 @@ import team28.Calc;
 
 public class MethodTest {
 
-	@Test
-	public void test() {
-		Calc c = new Calc();
-		double actual = c.calc_bcards(
-			/*Тираж*/	    0
-			,
-			/*Бумага*/      0
-			,
-			/*Формат*/	    0
-			,
-			/*Ламинация*/	0
-			,
-			/*Углы*/	    0
-			,
-			/*Тип печати*/	0
-			,
-			/*Д.Карта*/	    0
-		);
-		/*Значение в калькуляторе*/
-		double expected = 0;
-		System.out.print("Значение: " + actual + " " + "Ожидалось: " + expected);
-		assertTrue(actual == expected);
-	}
+@Test
+public void test() {
+Calc c = new Calc();
+double actual = c.calc_bcards(
+/*РўРёСЂР°Р¶*/ 0
+,
+/*Р‘СѓРјР°РіР°*/ 0
+,
+/*Р¤РѕСЂРјР°С‚*/ 0
+,
+/*Р›Р°РјРёРЅР°С†РёСЏ*/ 0
+,
+/*РЈРіР»С‹*/ 0
+,
+/*РўРёРї РїРµС‡Р°С‚Рё*/ 0
+,
+/*Р”.РљР°СЂС‚Р°*/ 0
+);
+/*Р—РЅР°С‡РµРЅРёРµ РІ РєР°Р»СЊРєСѓР»СЏС‚РѕСЂРµ*/
+double expected = 0;
+System.out.print("Р—РЅР°С‡РµРЅРёРµ: " + actual + " " + "РћР¶РёРґР°Р»РѕСЃСЊ: " + expected);
+assertTrue(actual == expected);
+}
 
 }
