@@ -13,18 +13,18 @@ public class FileWriterTest {
 @Test
 public void test() {
 try {
-FileWriter writer = new FileWriter("Тест.txt");
-writer.write("Тест");
+FileWriter writer = new FileWriter("РўРµСЃС‚.txt");
+writer.write("РўРµСЃС‚");
 writer.close();
 
 String actual = null;
-FileReader reader = new FileReader("Тест.txt");
+FileReader reader = new FileReader("РўРµСЃС‚.txt");
 char [] a = new char[4];
 reader.read(a);
 
 actual = String.valueOf(a);
 
-String expected = "Тест";
+String expected = "РўРµСЃС‚";
 
 assertEquals(actual, expected);
 
