@@ -5,7 +5,7 @@ import team28.Calc;
 
 import static org.junit.Assert.assertTrue;
 
-public class MethodTest2 {
+public class MethodTest {
 
 @Test
 public void test() {
