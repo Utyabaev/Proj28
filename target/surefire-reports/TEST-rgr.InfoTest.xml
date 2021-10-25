@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="1" failures="0" name="rgr.InfoTest" time="0.061" errors="0" skipped="0">
+<testsuite tests="1" failures="0" name="rgr.InfoTest" time="0.064" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
     <property name="java.vm.version" value="15.0.2+7-27"/>
@@ -22,7 +22,7 @@
 "/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="os.name" value="Linux"/>
-    <property name="classworlds.conf" value="/home/utyabaev/eclipse-workspace/.metadata/.plugins/org.eclipse.m2e.launching/launches/m2conf13773959272571634738.tmp"/>
+    <property name="classworlds.conf" value="/home/utyabaev/eclipse-workspace/.metadata/.plugins/org.eclipse.m2e.launching/launches/m2conf8979476952246117686.tmp"/>
     <property name="sun.jnu.encoding" value="UTF-8"/>
     <property name="java.library.path" value="/usr/java/packages/lib:/usr/lib64:/lib64:/lib:/usr/lib"/>
     <property name="jdk.debug" value="release"/>
@@ -53,5 +53,5 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="sun.cpu.endian" value="little"/>
   </properties>
-  <testcase classname="rgr.InfoTest" name="Info" time="0.061"/>
+  <testcase classname="rgr.InfoTest" name="Info" time="0.064"/>
 </testsuite>
