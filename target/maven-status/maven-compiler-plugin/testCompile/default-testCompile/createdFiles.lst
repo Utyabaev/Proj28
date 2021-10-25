@@ -1,4 +1,4 @@
-rgr\FileWriterTest.class
-rgr\ClassTest.class
-rgr\InfoTest.class
-rgr\MethodTest.class
+rgr/ClassTest.class
+rgr/FileWriterTest.class
+rgr/InfoTest.class
+rgr/MethodTest.class
