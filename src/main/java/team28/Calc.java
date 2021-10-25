@@ -1004,7 +1004,7 @@ public class Calc extends JFrame {
                                 ee.printStackTrace();
                             }
 
-                            Desktop desktop = null;
+                           /* Desktop desktop = null;
                             if (Desktop.isDesktopSupported()) {
                                 desktop = Desktop.getDesktop();
                             }
@@ -1014,7 +1014,7 @@ public class Calc extends JFrame {
                             } catch (IOException ioe) {
                                 ioe.printStackTrace();
                             }
-
+*/
                             document.close();
 
                         }
@@ -1160,7 +1160,7 @@ public class Calc extends JFrame {
                                 ee.printStackTrace();
                             }
 
-                           Desktop desktop = null;
+                          /* Desktop desktop = null;
                             if (Desktop.isDesktopSupported()) {
                                 desktop = Desktop.getDesktop();
                             }
@@ -1170,7 +1170,7 @@ public class Calc extends JFrame {
                             } catch (IOException ioe) {
                                 ioe.printStackTrace();
                             }
-
+*/
                             document.close();
 
                         }
