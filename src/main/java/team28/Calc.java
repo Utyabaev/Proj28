@@ -967,8 +967,12 @@ public class Calc extends JFrame {
                             } catch (DocumentException | IOException ee) {
                                 ee.printStackTrace();
                             }
-                            
-                            String string_pdf2 = "Leaflets";
+
+                            String string_pdf = "Variant 28. Polygrapy.";
+                            Paragraph paragraph = new Paragraph();
+                            paragraph.add(new Paragraph(string_pdf, new Font(times,14)));
+
+                            String string_pdf2 = "Leaflets.";
                             paragraph.add(new Paragraph(string_pdf2, new Font(times,14)));
 
                             try {
@@ -1049,7 +1053,7 @@ public class Calc extends JFrame {
                             cell2 = "Price";
                             cell5 = "Paper type";
                             cell6 = finalPaper_leaflets_val1;
-                            cell7 = "Foramt";
+                            cell7 = "Format";
                             cell8 = finalPhormat_leaflets_val1;
                             cell9 = "Perforation";
                             cell10 = finalPerforation_val1;
@@ -1120,7 +1124,11 @@ public class Calc extends JFrame {
                                 ee.printStackTrace();
                             }
 
-                            String string_pdf2 = "BCards.";
+                            String string_pdf = "Variant 28. Polygrapy.";
+                            Paragraph paragraph = new Paragraph();
+                            paragraph.add(new Paragraph(string_pdf, new Font(times,14)));
+
+                            String string_pdf2 = "BCards";
                             paragraph.add(new Paragraph(string_pdf2, new Font(times,14)));
 
                             try {
@@ -1208,7 +1216,7 @@ public class Calc extends JFrame {
                             cell8 = finalPhormat_leaflets_val1;
                             cell9 = "Lamination";
                             cell10 = finalType_leaflets_val1;
-                            cell11 = "Courners rounding";
+                            cell11 = "Angles rounding";
                             cell12 = finalAng_val1;
                             cell13 = "Print type";
                             cell14 = finalPerforation_val1;
