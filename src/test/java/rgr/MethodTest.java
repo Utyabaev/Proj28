@@ -1,4 +1,4 @@
-package rgr;
+/*package rgr;
 
 import static org.junit.Assert.*;
 
@@ -32,3 +32,4 @@ assertTrue(actual == expected);
 }
 
 }
+*/
