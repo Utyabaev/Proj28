@@ -967,12 +967,8 @@ public class Calc extends JFrame {
                             } catch (DocumentException | IOException ee) {
                                 ee.printStackTrace();
                             }
-
-                            String string_pdf = "Вариант 28. Калькулятор стоимости производства рекламных материалов. Полиграфия";
-                            Paragraph paragraph = new Paragraph();
-                            paragraph.add(new Paragraph(string_pdf, new Font(times,14)));
-
-                            String string_pdf2 = "Тип рекламного продукта: Листовки.";
+                            
+                            String string_pdf2 = "Leaflets";
                             paragraph.add(new Paragraph(string_pdf2, new Font(times,14)));
 
                             try {
@@ -984,7 +980,7 @@ public class Calc extends JFrame {
                             final String finalTiraj_val1 = finalTiraj_val +  "";
 
                             paragraph.clear();
-                            String string_pdf3 = "Тираж: " + finalTiraj_val1;
+                            String string_pdf3 = "Quantity: " + finalTiraj_val1;
                             paragraph.add(new Paragraph(string_pdf3, new Font(times,14)));
                             String string_pdf4 = " ";
                             paragraph.add(new Paragraph(string_pdf4, new Font(times,14)));
@@ -1004,7 +1000,7 @@ public class Calc extends JFrame {
                                 ee.printStackTrace();
                             }
 
-                            /*Desktop desktop = null;
+                            Desktop desktop = null;
                             if (Desktop.isDesktopSupported()) {
                                 desktop = Desktop.getDesktop();
                             }
@@ -1013,7 +1009,7 @@ public class Calc extends JFrame {
                                 desktop.open(new File("Итог.pdf"));
                             } catch (IOException ioe) {
                                 ioe.printStackTrace();
-                            }*/
+                            }
 
                             document.close();
 
@@ -1050,18 +1046,18 @@ public class Calc extends JFrame {
                             final String result = finalrez1_value;
 
                             cell1 = " ";
-                            cell2 = "Цена(руб)";
-                            cell5 = "Бумага";
+                            cell2 = "Price";
+                            cell5 = "Paper type";
                             cell6 = finalPaper_leaflets_val1;
-                            cell7 = "Формат";
+                            cell7 = "Foramt";
                             cell8 = finalPhormat_leaflets_val1;
-                            cell9 = "Перфорация";
+                            cell9 = "Perforation";
                             cell10 = finalPerforation_val1;
-                            cell11 = "Тип бумаги";
+                            cell11 = "Print type";
                             cell12 = finalType_leaflets_val1;
-                            cell13 = "Скидка";
+                            cell13 = "Discount";
                             cell14 = discount;
-                            cell15 = "ИТОГ:";
+                            cell15 = "Total:";
                             cell16 = result;
 
                             table.addCell(new Phrase(cell1, new Font(times,14)));
@@ -1103,7 +1099,7 @@ public class Calc extends JFrame {
                     final String finalrez1_value = rez4_value;
                     final double finalDiscount = rez4 * discount;
 
-                   /* pdf.addActionListener(new ActionListener() {
+                    pdf.addActionListener(new ActionListener() {
                         @Override
                         public void actionPerformed(ActionEvent e) {
                             Document document = new Document();
@@ -1124,11 +1120,7 @@ public class Calc extends JFrame {
                                 ee.printStackTrace();
                             }
 
-                            String string_pdf = "Вариант 28. Калькулятор стоимости производства рекламных материалов. Полиграфия";
-                            Paragraph paragraph = new Paragraph();
-                            paragraph.add(new Paragraph(string_pdf, new Font(times,14)));
-
-                            String string_pdf2 = "Тип рекламного продукта: Визитки.";
+                            String string_pdf2 = "BCards.";
                             paragraph.add(new Paragraph(string_pdf2, new Font(times,14)));
 
                             try {
@@ -1140,7 +1132,7 @@ public class Calc extends JFrame {
                             final String finalTiraj_val1 = finalTiraj_val2 +  "";
 
                             paragraph.clear();
-                            String string_pdf3 = "Тираж: " + finalTiraj_val1;
+                            String string_pdf3 = "Quantity: " + finalTiraj_val1;
                             paragraph.add(new Paragraph(string_pdf3, new Font(times,14)));
                             String string_pdf4 = " ";
                             paragraph.add(new Paragraph(string_pdf4, new Font(times,14)));
@@ -1160,7 +1152,7 @@ public class Calc extends JFrame {
                                 ee.printStackTrace();
                             }
 
-                          /* Desktop desktop = null;
+                           Desktop desktop = null;
                             if (Desktop.isDesktopSupported()) {
                                 desktop = Desktop.getDesktop();
                             }
@@ -1170,8 +1162,8 @@ public class Calc extends JFrame {
                             } catch (IOException ioe) {
                                 ioe.printStackTrace();
                             }
-*/
-                         /*   document.close();
+
+                            document.close();
 
                         }
 
@@ -1209,20 +1201,20 @@ public class Calc extends JFrame {
                             final String result = finalrez1_value;
 
                             cell1 = " ";
-                            cell2 = "Цена(руб)";
-                            cell5 = "Бумага";
+                            cell2 = "Price";
+                            cell5 = "Paper type";
                             cell6 = finalPaper_leaflets_val1;
-                            cell7 = "Формат";
+                            cell7 = "Format";
                             cell8 = finalPhormat_leaflets_val1;
-                            cell9 = "Ламинация";
+                            cell9 = "Lamination";
                             cell10 = finalType_leaflets_val1;
-                            cell11 = "Скругление углов";
+                            cell11 = "Courners rounding";
                             cell12 = finalAng_val1;
-                            cell13 = "Тип печати";
+                            cell13 = "Print type";
                             cell14 = finalPerforation_val1;
-                            cell15 = "Скидка";
+                            cell15 = "Discount";
                             cell16 = discount;
-                            cell17 = "ИТОГ:";
+                            cell17 = "Total:";
                             cell18 = result;
 
                             table.addCell(new Phrase(cell1, new Font(times,14)));
@@ -1244,7 +1236,7 @@ public class Calc extends JFrame {
 
                         }
 
-                    });*/
+                    });
 
                     result.setText(rez4_value+" Рублей");
                     discount = 0;
