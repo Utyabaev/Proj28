@@ -1928,7 +1928,7 @@ public class Calc extends JFrame {
 
                             try {
 
-                                times = BaseFont.createFont("Proj28/src/main/resources/fonts/times.ttf", "cp1251", BaseFont.EMBEDDED);
+                                times = BaseFont.createFont("/src/main/resources/fonts/times.ttf", "cp1251", BaseFont.EMBEDDED);
 
                             } catch (DocumentException | IOException ee) {
 
